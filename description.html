@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiktik Time</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Section styling */
+        .secone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Text block styling */
+        .description1 {
+            color: #fff;
+            font-size: 1.8rem;
+            z-index: 10;
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: center;
+            backdrop-filter: blur(5px); /* adds a slight blur behind the text block */
+        }
+
+        .description1 ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .description1 ul li {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .description1 ul li:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Background image styling */
+        .backimg {
+            width: 100%;
+            height: 100vh;
+            background-image: url("images/WhatsApp Image 2024-08-19 at 2.32.59 PM.jpeg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Dark overlay effect on image */
+        .backimg::before {
+            content: "";
+            background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+        }
+
+        /* Scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Smooth transitions */
+        .description1 ul li {
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .description1 ul li:hover {
+            color: #00e6e6; /* Aqua hover effect */
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .description1 {
+                font-size: 1.4rem;
+                padding: 20px;
+            }
+
+            .description1 ul li {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .description1 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="secone">
+        <div class="backimg"></div>
+        <div class="description1">
+            <ul class="liststyle">
+                <li><b>Casio</b></li>
+                <li><b>G-shock</b></li>
+                <li><b>OG Model : GA-110-1B</b></li>
+                <li><b>Premium Quality</b></li>
+                <li><b>World Time</b></li>
+                <li><b>Automatic Time Setting</b></li>
+                <li><b>Automatic Tilt Light</b></li>
+                <li><b>Tough Quality Material</b></li>
+                <li><b>Overall Quality Satisfaction Guaranteed 100%</b></li>
+                <li><b>Long Durable Batteries</b></li>
+                <li><b>Dual Time with both Analog and Digital Working</b></li>
+                <li><b>All Season Wearable</b></li>
+                <li><b>Price: Rs 1299/- Free Shipping</b></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>

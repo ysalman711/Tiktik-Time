@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --dark-blue: #0A1D3C;
+    --light-gray:#E5E5E5;
+    --white: #FFF;
+    --light-peach: #F9E3BC;
+    --dark-gray: #3E3F43;
+    --light-black:#1D1D1D;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+/* ---section one--- */
+.section{
+    min-height: 100vh;
+    width: 100%;
+}
+nav{
+    width: 80%;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin: auto;
+}
+header{
+    width: 80%;
+    height: calc(100vh - 13vh);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.navlinks{
+    display: flex;
+}
+.header-image{
+    width: 20rem;
+}
+.logo{
+    font-size: 3.3rem;
+    color: var(--dark-blue);
+    font-family: "Allison", cursive;
+}
+.navlinks li{
+    list-style: none;
+}
+.navlinks li a{
+    text-decoration: none;
+    margin-left : 2.5rem;
+    color: var(--dark-blue);
+    font-size: 1rem;
+    letter-spacing: .03rem;
+    position: relative;
+}
+.header-heading{
+    font-size: 3.5rem;
+    position: relative;
+}
+.header-heading::before{
+    content: "New";
+    position: absolute;
+    top: -60px;
+    color: var(--dark-blue);
+    font-family: "Allison", cursive;
+}
+.product-name{
+    font-size: 2rem;
+}
+.header-pricing{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.primary-btn,.secondary-btn{
+    font-size: 18px;
+    border-radius: 15px;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 9px;
+    transition: transform .5s ease-in-out;
+    cursor: pointer;
+}
+.btn-container{
+    display: flex;
+}
+.primary-btn{
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+.secondary-btn{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    transform: scaleX(1.1);
+}
+.primary-btn:hover,.section-four-btn:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.secondary-btn:hover{
+    transform: scale(1);
+}
+.navlinks li a::after, .navlinks li .active::after{
+    content: "";
+    background: var(--dark-blue);
+    position: absolute;
+    height: .15rem;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform .5s ease;
+    transform-origin: right;
+}
+.navlinks li a:hover::after,.navlinks li .active::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.line{
+    background: var(--dark-gray);
+    width:2.5rem;
+    height: .2rem;
+    margin: .25rem;
+}
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+/* ---section two--- */
+.section-two{
+    display: flex;
+    align-items: center;
+}
+.section-two-container{
+    background: var(--light-peach);
+    width:100%;
+    height: 85vh;
+    transform: skewY(-6deg);
+}
+.section-two-image{
+    width: 30rem;
+    border-radius: 3rem;
+}
+.section-two-inner-container{
+    transform: skewY(5deg);
+    width: 80%;
+    margin: auto;
+}
+.section-two-inner-container , .section-two-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button1{
+    border: .2rem solid var(--light-black);
+    background: transparent;
+    color: var(--dark-blue);
+    font-size: 1.3rem;
+    margin: 5px;
+    padding: .6rem 1.1rem;
+    transition: transform .5s ease-in-out;
+    cursor: pointer;
+}
+.button1:hover{
+    transform: scale(1.1);
+}
+.header-heading1{
+    font-size: 3rem;
+    position: relative;
+    color: var(--dark-gray);
+}
+.product-description{
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+    line-height: 3rem;
+    max-width: 85%;
+}
+.product-pricing{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--light-black);
+    margin: .9rem 0;
+}
+.header-heading1::before{
+    content: "Machinery Trend";
+    position: absolute;
+    top: -50px;
+    color: var(--dark-blue);
+    font-family: "Allison", cursive;
+}
+
+/* ---section Three--- */
+.section-heading{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.card-image{
+    width: 25rem;
+}
+.card{
+    background: rgb(152, 211, 228);
+    padding: 2rem;
+}
+.card-container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+    background:var(--dark-blue);
+}
+.card-pricing{
+    font-size: 1.4rem;
+    margin-top: .2rem;
+    margin-bottom: 1.2rem;
+}
+
+
+/* ---section four--- */
+.section-four{
+    display:flex;
+    align-items: center;
+}
+.section-four-container{
+    width: 100%;
+    height: 140vh;
+    display: flex;
+    justify-content: bottom;
+    align-items: bottom;
+    text-align: bottom;
+    background-image: url("images/WhatsApp\ Image\ 2024-08-19\ at\ 2.33.03\ PM.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+.section-four-offer{
+    font-size: 4.5rem;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+}
+.section-four-heading{
+    font-size: 3.5rem;
+    color : var(--light-peach);
+    margin-bottom: 1rem;
+}
+.section-four-btn{
+    font-size: 1.1rem;
+    padding: 1rem 1.7rem;
+    background: rgb(152, 211, 228);   
+    border: none;
+    transition: transform .5s ease;
+}
+.section-four-container::before{
+    content: "";
+    background: rgba(0, 0, 0, 0.544);
+    position: absolute;
+    inset: 0;
+}
+.section-four-container .content{
+    z-index: 5;
+}
+
+
+/* ---section-five--- */
+.section-five-container{
+    width: 100%;
+    height: 40vh;
+    background-color: var(--light-peach);
+}
+.content5{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: .03rem;
+}
+.heading5{
+    color: var(--dark-blue);
+    font-size: 5rem;
+    font-family: "Allison";
+    
+}
+.service1{
+    font-size: 1.8rem;
+    margin: 1rem;
+}
+.contact{
+    font-size: 2.5rem;
+    color: var(--light-gray);
+    background: var(--dark-blue);
+}
+.para1,.para2{
+    font-size: 1.15rem;
+    background: var(--light-gray);
+}
+/* ---footer-style--- */
+.footer{
+    background: var(--light-black);
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.footer-txt{
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+
+
+
+
+/*---media queries1---*/
+@media screen and (max-width: 655px){
+    .header-image{
+        width: 100%;
+    }
+    .navlinks{
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        background: var(--light-gray);
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        right: 100%;
+        z-index: 2;
+        gap: 2rem;
+        transition: .5s ease-in-out;
+    }
+    .navlinks-active{
+        right:0;
+    }
+    .navlinks li a{
+        font-size: 1.3rem;
+        margin-left: 0;
+    }
+    .hamburger{
+        display: block;
+        z-index: 5;
+    }
+    .section .logo{
+        z-index: 5;
+    }
+    .header-heading{
+        font-size: 3rem;    }
+    header{
+        justify-content:flex-start;
+    }
+    .primary-btn,.secondary-btn{
+        font-size: 15px;
+        border-radius: 10px;
+        border: 2px solid black;
+        margin: 6px;
+        padding: 7px;
+        transition: transform .5s ease-in-out;
+    }
+
+
+    /*--@mediaQueries section2--*/
+
+
+    .section-two-image{
+        max-width: 100%;
+    }
+    .header-heading1{
+        font-size: 2rem;
+    }
+    .product-description{
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+    .product-pricing{
+        font-size: 1rem;
+    }
+    .button1{
+        font-size: 1rem;
+        padding: .3rem .6rem;
+    }
+    .section-two-container{
+        height: 80vh;
+    }
+    .section-two-inner-container{
+        width: 100%;
+    }
+
+
+
+    /* ---section-three--- */
+    .card-image{
+        width: 17rem;
+    }
+
+
+
+    /* ---media queries section four--- */
+    .section-four-heading{
+        font-size:2.5rem;
+    }
+    .section-four-offer{
+        font-size: 2.3rem;
+    }
+    .section-four-btn{
+        font-size: 1rem;
+    }    
+
+    /* ---medua-queries-sec5--- */
+    .heading5{
+        font-size: 3rem;
+    }
+    .contact{
+        font-size: .70rem;
+    }.service1{
+        font-size: 1rem;
+    }
+    .para1,.para2{
+        font-size: 1rem;
+    }
+    .footer-txt{
+        font-size: 1rem;
+    }
+}
+
